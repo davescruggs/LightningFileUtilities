@@ -1,1 +1,30 @@
-<aura:component ></aura:component>
+<aura:component controller="FileAttacherExtensionController"
+                implements="flexipage:availableForAllPageTypes,force:hasRecordId"
+                access="global">
+
+    <!-- Id of the Record the page hosting this component is showing -->
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="pictures" type="Array"/>
+    <aura:attribute name="message"  type="string" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+
+
+    <div>
+    	<h2> File Uploader</h2>
+        <div ondragover="{!c.onDragOver}" ondrop="{!c.onDrop}">
+            <div class="placeholder">
+	            <img src="https://s3-us-west-1.amazonaws.com/sfdc-demo/icon-camera.png"/>
+    	        <div>Drag files here</div>
+            </div>
+            <div class="gallery">
+                <aura:iteration items="{!v.pictures}" var="picture" indexVar="index">
+                    <img src="{!picture}"/>
+                </aura:iteration>
+            </div>
+        </div>
+        <p>{!v.message}</p>
+    </div>
+
+</aura:component>

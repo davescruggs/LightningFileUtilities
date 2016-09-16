@@ -12,4 +12,20 @@ public with sharing class FileAttacherExtensionController {
     public String getRecordName() {
         return 'Hello ' + (String)mysObject.get('name') + ' (' + (Id)mysObject.get('Id') + ')';
     }
+
+		@AuraEnabled
+		public static Id saveAttachment(Id parentId, String fileName, String base64Data, String contentType) {
+        base64Data = EncodingUtil.urlDecode(base64Data, 'UTF-8');
+
+        Attachment a = new Attachment();
+        a.parentId = parentId;
+
+        a.Body = EncodingUtil.base64Decode(base64Data);
+        a.Name = fileName;
+        a.ContentType = contentType;
+
+        insert a;
+
+        return a.Id;
+    }
 }
