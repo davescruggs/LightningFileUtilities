@@ -30,6 +30,33 @@
             }
         }
 
-    }
+    },
+
+		getAttachments : function(component) {
+			var action = component.get("c.getAttachments");
+			action.setParams({
+					parentId : component.get("v.recordId")
+			});
+
+			action.setCallback(this, function(a) {
+					if (a.getState() === "SUCCESS") {
+							var attachments = a.getReturnValue();
+							component.set("v.attachments", attachments);
+					} else if (a.getState() === "ERROR") {
+							console.log("Error getting attachments");
+							var errors = a.getError();
+							component.set("v.message", "Attachment Retrieval Error " + errors);
+							if (errors) {
+									if (errors[0] && errors[0].message) {
+											console.log("Error message: " +
+															 errors[0].message);
+									}
+							} else {
+									console.log("Unknown Attachment Retrieval Error");
+							}
+					}
+			});
+			$A.enqueueAction(action);
+	}
 
 })
