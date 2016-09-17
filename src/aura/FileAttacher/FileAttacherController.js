@@ -1,7 +1,9 @@
 ({
-    onInit: function(component) {
-			component.set("v.pictures", []);
-			getAttachments(component);
+    onInit: function(component, event, helper) {
+        component.set("v.pictures", []);
+				console.log("++++ FileAttacher:onInit Getting Attachments +++++");
+				helper.getAttachments(component);
+				console.log("++++ FileAttacher:onInit Exiting +++++");
     },
 
     onDragOver: function(component, event) {
@@ -16,50 +18,21 @@
 
         var files = event.dataTransfer.files;
 
-        for (var i=0; i<files.length; i=i+1) {
+        for (var i = 0; i < files.length; i = i + 1) {
             var file = files[i];
-            if (file.type.match(/(image.*)/)) {
+          //  if (file.size < 750000)) {
                 var reader = new FileReader();
                 reader.onloadend = function(e) {
                     var dataURL = e.target.result;
-                    var pictures = component.get("v.pictures");
-                    pictures.push(dataURL);
-                    component.set("v.pictures", pictures);
+                    //var pictures = component.get("v.pictures");
+                    //pictures.push(dataURL);
+                    //component.set("v.pictures", pictures);
                     helper.upload(component, file, dataURL.match(/,(.*)$/)[1]);
                 };
                 reader.readAsDataURL(file);
-            }
+          //  }
         }
-
-    },
-
-		getAttachments : function(component) {
-			var action = component.get("c.getAttachments");
-			action.setParams({
-					parentId : component.get("v.recordId")
-			});
-			console.log("getting attachments");
-
-			action.setCallback(this, function(a) {
-					if (a.getState() === "SUCCESS") {
-							var attachments = a.getReturnValue();
-							component.set("v.attachments", attachments);
-							console.log("retrieved attachements, there are " + attachments.length + " attachments");
-					} else if (a.getState() === "ERROR") {
-							console.log("Error getting attachments");
-							var errors = a.getError();
-							component.set("v.message", "Attachment Retrieval Error " + errors);
-							if (errors) {
-									if (errors[0] && errors[0].message) {
-											console.log("Error message: " +
-															 errors[0].message);
-									}
-							} else {
-									console.log("Unknown Attachment Retrieval Error");
-							}
-					}
-			});
-			$A.enqueueAction(action);
-	}
+				helper.getAttachments(component);
+    }
 
 })

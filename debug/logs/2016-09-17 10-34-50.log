@@ -1,0 +1,136 @@
+38.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+07:34:48.0 (286997)|USER_INFO|[EXTERNAL]|005m0000002GNhO|dscruggs@salesforce.com.rfadev13|Pacific Standard Time|GMT-07:00
+07:34:48.0 (321005)|EXECUTION_STARTED
+07:34:48.0 (327817)|CODE_UNIT_STARTED|[EXTERNAL]|aura
+07:34:48.0 (827024)|HEAP_ALLOCATE|[72]|Bytes:3
+07:34:48.0 (898018)|HEAP_ALLOCATE|[77]|Bytes:152
+07:34:48.0 (919784)|HEAP_ALLOCATE|[342]|Bytes:408
+07:34:48.0 (937513)|HEAP_ALLOCATE|[355]|Bytes:408
+07:34:48.0 (954268)|HEAP_ALLOCATE|[467]|Bytes:48
+07:34:48.0 (986370)|HEAP_ALLOCATE|[139]|Bytes:6
+07:34:48.0 (1014685)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:778
+07:34:48.0 (1034416)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:778
+07:34:48.0 (3137461)|CODE_UNIT_STARTED|[EXTERNAL]|01pm0000000EXpe|PowerRelatedListCtrl.query
+07:34:48.0 (3238186)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:14
+07:34:48.0 (3244075)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:21
+07:34:48.0 (3246575)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:27
+07:34:48.0 (3256345)|METHOD_ENTRY|[1]|01pm0000000EXpe|PowerRelatedListCtrl.PowerRelatedListCtrl()
+07:34:48.0 (3259931)|STATEMENT_EXECUTE|[1]
+07:34:48.0 (3265594)|STATEMENT_EXECUTE|[1]
+07:34:48.0 (3306211)|HEAP_ALLOCATE|[50]|Bytes:5
+07:34:48.0 (3334320)|HEAP_ALLOCATE|[56]|Bytes:5
+07:34:48.0 (3343006)|HEAP_ALLOCATE|[64]|Bytes:7
+07:34:48.0 (3369108)|SYSTEM_MODE_ENTER|false
+07:34:48.0 (3396877)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+07:34:48.0 (3401431)|STATEMENT_EXECUTE|[219]
+07:34:48.0 (3408364)|SYSTEM_MODE_EXIT|false
+07:34:48.0 (3416298)|METHOD_EXIT|[1]|PowerRelatedListCtrl
+07:34:48.0 (3420738)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:778
+07:34:48.0 (3426922)|SYSTEM_MODE_ENTER|false
+07:34:48.0 (3438164)|VARIABLE_SCOPE_BEGIN|[4]|soql|String|false|false
+07:34:48.0 (3480813)|VARIABLE_ASSIGNMENT|[4]|soql|"select Id, Organizat (758 more) ..."
+07:34:48.0 (3498135)|HEAP_ALLOCATE|[5]|Bytes:5
+07:34:48.0 (3501655)|STATEMENT_EXECUTE|[4]
+07:34:48.0 (3502997)|STATEMENT_EXECUTE|[5]
+07:34:48.0 (4804712)|SOQL_EXECUTE_BEGIN|[5]|Aggregations:0|select Id, Organization__c, Name, Request_Type__c, Category__c, Submitted_By__c, Business_Area__c, Submitted_By_Phone_Number__c, Submitted_On_Behalf_Of__c, Delegated_Requestor__c, Delegated_Requestor_check__c, Supplier_Name__c, Do_not_Auto_Assign__c, Supplier_Contact_Name__c, Manager__c, Supplier_Contact_Email__c, Request_Comments_Updates__c, Supplier_Contact_Phone_Number__c, Actual_Requestor__c, Opportunity_Statement__c, If_Chg_Order_Provide_Orig_Contract_Value__c, I_Have_Read_The_Provided_ITP_OLA__c, Engagement_Of_A_New_Supplier__c, Assign_check__c, If_Rqd_Has_Hosting_Cert_Team_Approved__c, Portfolio_Department__c, If_Required_Has_The_TRB_Approved__c, Date_Needed_By__c, Primary_Assignee__c, Primary_Assignee_Prior_Value__c from ITPR__c where Id = 'a1Nm00000011q90EAA'
+07:34:48.0 (21588484)|SOQL_EXECUTE_END|[5]|Rows:1
+07:34:48.0 (21611218)|HEAP_ALLOCATE|[5]|Bytes:8
+07:34:48.0 (21634675)|HEAP_ALLOCATE|[5]|Bytes:695
+07:34:48.0 (21752012)|HEAP_ALLOCATE|[5]|Bytes:8
+07:34:48.0 (21797113)|HEAP_ALLOCATE|[5]|Bytes:24
+07:34:48.0 (21808137)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+07:34:48.0 (21810737)|STATEMENT_EXECUTE|[1]
+07:34:48.0 (21817843)|SYSTEM_METHOD_EXIT|[1]|JSON
+07:34:48.0 (21832489)|METHOD_ENTRY|[5]||System.JSON.serialize(Object)
+07:34:48.0 (22401883)|METHOD_EXIT|[5]||System.JSON.serialize(Object)
+07:34:48.0 (22414201)|SYSTEM_MODE_EXIT|false
+07:34:48.22 (22470340)|CUMULATIVE_LIMIT_USAGE
+07:34:48.22 (22470340)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+07:34:48.22 (22470340)|CUMULATIVE_LIMIT_USAGE_END
+
+07:34:48.0 (22516370)|CODE_UNIT_FINISHED|PowerRelatedListCtrl.query
+07:34:48.0 (57570111)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:7
+07:34:48.0 (57595708)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:7
+07:34:48.0 (57650250)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:9
+07:34:48.0 (57660089)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:9
+07:34:48.0 (59715190)|CODE_UNIT_STARTED|[EXTERNAL]|01pm0000000EZxV|GuidanceBox.dynamicTopic
+07:34:48.0 (59773161)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+07:34:48.0 (59779184)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:2
+07:34:48.0 (59789860)|METHOD_ENTRY|[1]|01pm0000000EZxV|GuidanceBox.GuidanceBox()
+07:34:48.0 (59793037)|STATEMENT_EXECUTE|[1]
+07:34:48.0 (59797818)|STATEMENT_EXECUTE|[1]
+07:34:48.0 (59803186)|METHOD_EXIT|[1]|GuidanceBox
+07:34:48.0 (59807602)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:7
+07:34:48.0 (59809397)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:9
+07:34:48.0 (59818472)|SYSTEM_MODE_ENTER|false
+07:34:48.0 (59824961)|VARIABLE_SCOPE_BEGIN|[30]|WhichObject|String|false|false
+07:34:48.0 (59837205)|VARIABLE_ASSIGNMENT|[30]|WhichObject|"ITPR__c"
+07:34:48.0 (59839709)|VARIABLE_SCOPE_BEGIN|[30]|Field|String|false|false
+07:34:48.0 (59842381)|VARIABLE_ASSIGNMENT|[30]|Field|"Status__c"
+07:34:48.0 (59849062)|STATEMENT_EXECUTE|[30]
+07:34:48.0 (59850419)|STATEMENT_EXECUTE|[31]
+07:34:48.0 (60827269)|HEAP_ALLOCATE|[31]|Bytes:15
+07:34:48.0 (60834671)|HEAP_ALLOCATE|[31]|Bytes:8
+07:34:48.0 (60841588)|METHOD_ENTRY|[1]|01pm0000000EXDB|AnythingPath.AnythingPath()
+07:34:48.0 (60843936)|STATEMENT_EXECUTE|[1]
+07:34:48.0 (60846810)|STATEMENT_EXECUTE|[1]
+07:34:48.0 (60850996)|METHOD_EXIT|[1]|AnythingPath
+07:34:48.0 (60862633)|METHOD_ENTRY|[31]|01pm0000000EXDB|AnythingPath.dynamicTopic(String, String)
+07:34:48.0 (60883370)|VARIABLE_SCOPE_BEGIN|[65]|WhichObject|String|false|false
+07:34:48.0 (60890734)|VARIABLE_ASSIGNMENT|[65]|WhichObject|"ITPR__c"
+07:34:48.0 (60892736)|VARIABLE_SCOPE_BEGIN|[65]|Field|String|false|false
+07:34:48.0 (60895306)|VARIABLE_ASSIGNMENT|[65]|Field|"Status__c"
+07:34:48.0 (60899358)|STATEMENT_EXECUTE|[65]
+07:34:48.0 (60900542)|STATEMENT_EXECUTE|[67]
+07:34:48.0 (60905011)|HEAP_ALLOCATE|[67]|Bytes:11
+07:34:48.0 (60910185)|HEAP_ALLOCATE|[67]|Bytes:6
+07:34:48.0 (60927429)|HEAP_ALLOCATE|[67]|Bytes:33
+07:34:48.0 (60932421)|VARIABLE_SCOPE_BEGIN|[67]|DynamicQuery|String|false|false
+07:34:48.0 (60941369)|VARIABLE_ASSIGNMENT|[67]|DynamicQuery|"Select Id, Status__c (13 more) ..."
+07:34:48.0 (60943453)|STATEMENT_EXECUTE|[70]
+07:34:48.0 (60945973)|HEAP_ALLOCATE|[70]|Bytes:85
+07:34:48.0 (60959971)|HEAP_ALLOCATE|[70]|Bytes:4
+07:34:48.0 (60971858)|HEAP_ALLOCATE|[70]|Bytes:7
+07:34:48.0 (61360024)|SOQL_EXECUTE_BEGIN|[70]|Aggregations:0|SELECT Id, ApiVersion, Name, Description, Query FROM Pushtopic WHERE Query = :tmpVar1
+07:34:48.0 (65801240)|SOQL_EXECUTE_END|[70]|Rows:1
+07:34:48.0 (65820713)|HEAP_ALLOCATE|[70]|Bytes:8
+07:34:48.0 (65837629)|HEAP_ALLOCATE|[70]|Bytes:199
+07:34:48.0 (65929846)|HEAP_ALLOCATE|[70]|Bytes:8
+07:34:48.0 (65943186)|VARIABLE_SCOPE_BEGIN|[70]|topicList|List<PushTopic>|true|false
+07:34:48.0 (65985635)|VARIABLE_ASSIGNMENT|[70]|topicList|{"s":1,"v":[{"s":2,"v":{"Id":"0IFm00000004E6HGAU","ApiVersion":36.0,"Name":"ITPR__cStatus__c","Description":"Autogenerated by Any (19 more) ...","Query":"Select Id, Status__c (13 more) ..."}}]}|0x35f52d37
+07:34:48.0 (66066968)|STATEMENT_EXECUTE|[85]
+07:34:48.0 (66069915)|STATEMENT_EXECUTE|[86]
+07:34:48.0 (66106260)|HEAP_ALLOCATE|[86]|Bytes:24
+07:34:48.0 (66142856)|METHOD_EXIT|[31]|01pm0000000EXDB|AnythingPath.dynamicTopic(String, String)
+07:34:48.0 (66151581)|SYSTEM_MODE_EXIT|false
+07:34:48.66 (66198614)|CUMULATIVE_LIMIT_USAGE
+07:34:48.66 (66198614)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+07:34:48.66 (66198614)|CUMULATIVE_LIMIT_USAGE_END
+
+07:34:48.0 (66243304)|CODE_UNIT_FINISHED|GuidanceBox.dynamicTopic
