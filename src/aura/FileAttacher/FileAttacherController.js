@@ -1,6 +1,7 @@
 ({
     onInit: function(component) {
-		component.set("v.pictures", []);
+			component.set("v.pictures", []);
+			getAttachments(component);
     },
 
     onDragOver: function(component, event) {
@@ -37,11 +38,13 @@
 			action.setParams({
 					parentId : component.get("v.recordId")
 			});
+			console.log("getting attachments");
 
 			action.setCallback(this, function(a) {
 					if (a.getState() === "SUCCESS") {
 							var attachments = a.getReturnValue();
 							component.set("v.attachments", attachments);
+							console.log("retrieved attachements, there are " + attachments.length + " attachments");
 					} else if (a.getState() === "ERROR") {
 							console.log("Error getting attachments");
 							var errors = a.getError();
