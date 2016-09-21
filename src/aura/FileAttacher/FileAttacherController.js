@@ -33,6 +33,37 @@
           //  }
         }
 				helper.getAttachments(component);
-    }
+    },
+		onChooserClose: function(component, event, helper){
+
+			// file-upload-input-01
+			var fileInput = component.find("file-upload-input-01").getElement();
+			// for each file section (just one file now)
+			var file = fileInput.files[0];
+			var fileCount = fileInput.files.length;
+			console.log("file chooser changed or took input");
+			console.log("The user selected " + fileCount + " files.");
+
+			if (file.size > 750000){
+				var toastEvent = $A.get("e.force:showToast");
+				 toastEvent.setParams({
+						"title": "File Too Large!",
+						"message": "The file is " + file.size + " bytes, which is too large for upload."
+				});
+				toastEvent.fire();
+				return;
+			}
+			var fr = new FileReader();
+			fr.onload = function(){
+				var fileContents = fr.result;
+				var base64Mark = 'base64,';
+				var dataStart = fileContents.indexOf(base64Mark) + base64Mark.length;
+
+				fileContents = fileContents.substring(dataStart);
+				helper.upload(component, file, fileContents);
+			}
+			fr.readAsDataURL(file);
+			// end for each file (just one now)
+		}
 
 })

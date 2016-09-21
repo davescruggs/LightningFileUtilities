@@ -15,12 +15,13 @@
                 <div class="slds-form-element">
                     <span class="slds-form-element__label" id="file-selector-id">Attachment</span>
                     <div class="slds-form-element__control">
-                        <div class="slds-file-selector slds-file-selector--files">
+                        <div class="slds-file-selector slds-file-selector--images">
                             <div class="slds-file-selector__dropzone">
-                                <input class="slds-file-selector__input slds-assistive-text" type="file" id="file-upload-input-01" aria-describedby="file-selector-id"/>
+                                <input class="slds-file-selector__input slds-assistive-text" type="file" multiple="" id="file-upload-input-01" aura:id="file-upload-input-01" onchange="{!c.onChooserClose}" oninput="{!c.onChooserClose}" aria-describedby="file-selector-id"/>
                                 <label class="slds-file-selector__body" for="file-upload-input-01">
                                     <span class="slds-file-selector__button slds-button slds-button--neutral">
-                                        <c:svgIcon svgPath="/resource/WIN17SLDS/assets/icons/action-sprite/svg/symbols.svg#upload" category="action" size="small" name="upload" assistiveText="Click for file chooser" class="slds-button__icon " />
+                                      <lightning:icon iconName="utility:upload" size="large" alternativeText="Click to upload files"/>
+
                                         Upload Files
                                     </span>
                                     <span class="slds-file-selector__text slds-medium-show">or Drop Files</span>
@@ -38,11 +39,6 @@
                         </li>
                     </aura:iteration>
                 </ul>
-            </div>
-            <div class="gallery">
-                <aura:iteration items="{!v.pictures}" var="picture" indexVar="index">
-                    <img src="{!picture}"/>
-                </aura:iteration>
             </div>
         </div>
         <p class=".slds-text-heading--medium">{!v.message}</p>
