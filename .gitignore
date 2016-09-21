@@ -28,6 +28,7 @@ local.properties
 *.sublime-settings
 *.sublime-workspace
 mm.log
+debug/
 
 # Haoide SublimeText
 .config

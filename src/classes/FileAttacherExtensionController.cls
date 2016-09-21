@@ -35,6 +35,7 @@ public with sharing class FileAttacherExtensionController {
 						SELECT Id, Name
 						FROM Attachment
 						WHERE ParentId = :parentId
+						LIMIT 5
 				];
 		}
 }

@@ -12,8 +12,6 @@
         <h2 class="slds-text-heading--large">File Uploader</h2>
         <div ondragover="{!c.onDragOver}" ondrop="{!c.onDrop}">
             <div class="placeholder">
-                <c:svgIcon svgPath="/resource/WIN17SLDS/assets/icons/action-sprite/svg/symbols.svg#upload" category="action" size="large" name="upload" assistiveText="Drag files here to upload"/>
-                <div>Drag files here</div>
                 <div class="slds-form-element">
                     <span class="slds-form-element__label" id="file-selector-id">Attachment</span>
                     <div class="slds-form-element__control">
@@ -22,7 +20,7 @@
                                 <input class="slds-file-selector__input slds-assistive-text" type="file" id="file-upload-input-01" aria-describedby="file-selector-id"/>
                                 <label class="slds-file-selector__body" for="file-upload-input-01">
                                     <span class="slds-file-selector__button slds-button slds-button--neutral">
-                                        <c:svgIcon svgPath="/resource/WIN17SLDS/assets/icons/action-sprite/svg/symbols.svg#upload" category="action" size="small" name="upload" assistiveText="Drag files here to upload" class="slds-button__icon " />
+                                        <c:svgIcon svgPath="/resource/WIN17SLDS/assets/icons/action-sprite/svg/symbols.svg#upload" category="action" size="small" name="upload" assistiveText="Click for file chooser" class="slds-button__icon " />
                                         Upload Files
                                     </span>
                                     <span class="slds-file-selector__text slds-medium-show">or Drop Files</span>
