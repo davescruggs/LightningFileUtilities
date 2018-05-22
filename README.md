@@ -1,3 +1,5 @@
+## Deprecating -- There are File Utilities as base components now, and this is 2017 style
+
 File utilities for Salesforce Lightning. Currently for Salesforce Lightning Experience only.
 
 _Components_
